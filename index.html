@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Distance Tracker</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!--HOME PAGE -->
+    <div data-role="page" id="home">
+      <header data-role="header" data-theme="a">
+        <h1>Distance Tracker</h1>
+      </header>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+        </ul>
+      </div>
+      <div data-role="content">
+        <h3 class="text">Welcome to the Distance Run App!</h3>
+          <p class="text">Track your running, jogging or walking miles.</p>
+
+        <h3 class="text">Your Latest Runs</h3>
+          <ul id="stats" data-role="listview" data-filter="true" data-filter-placeholder"Filter runs by date or distance" data-inset="true">
+          </ul>
+          <br>
+
+          <button id="clearRuns"type="button" onclick="return confirm("Are You Sure?")" data-theme="b">Clear Total</button>
+      </div>
+      <footer data-role="footer" data-theme="a">
+        <h4>Distance Tracker &copy;2017 </h4>
+      </footer>
+    </div>
+    <!--- Add page-->
+    <div data-role="page" id="add">
+      <header data-role="header" data-theme="a">
+        <h1>Mile Tracker</h1>
+      </header>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+        </ul>
+      </div>
+      <div data-role="content">
+        <h3>Add Run</h3>
+          <form id="addForm">
+            <label for="miles">Enter Miles:</label>
+            <input type="text" id="addMiles">
+
+            <label for="addDate">Enter Date:</label>
+            <input type="text" data-role="date" class="date" id="addDate" data-inline="true">
+            <button type="button" id="submitAdd" class="ui-btn ui-btn-b ui-corder-all">Submit</button>
+        </form>
+      </div>
+      <footer data-role="footer" data-theme="a">
+        <h4>Distance Tracker &copy; 2017 </h4>
+      </footer>
+    </div>
+    <!--Edit page-->
+    <div data-role="page" id="edit">
+      <header data-role="header" data-theme="a">
+        <h1>Mile Tracker</h1>
+      </header>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+          <li><a href="#add" data-transition="none" data-icon="plus">Add Run</a></li>
+        </ul>
+      </div>
+      <div data-role="content">
+        <h3>Edit Run</h3>
+          <form id="addForm">
+            <label for="miles">Enter Miles:</label>
+            <input type="text" id="editMiles">
+
+            <label for="addDate">Enter Date:</label>
+            <input type="text" data-role="date" class="date" id="editDate" data-inline="true">
+            <button type="button" id="submitEdit" class="ui-btn ui-btn-b ui-corder-all">Update</button>
+        </form>
+      </div>
+      <footer data-role="footer" data-theme="a">
+        <h4>Distance Tracker &copy; 2017 </h4>
+      </footer>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

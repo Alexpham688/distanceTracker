@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+  font-family: "trebuchet MS", times, serif;
+}
+ul {
+  display: block;
+}
+.controls {
+  float: right;
+}
+.ui-page{
+    background:url("img/black.jpg") no-repeat;
+    background-size:cover;
+}
+#stats p{
+  color: #F00;
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: "arial black", "trebuchet ms",sans-serif;
+}
+header {
+  background: url('img/black.jpg');
+  font-size: 1.7em;
+  font-weight: bold;
+}
